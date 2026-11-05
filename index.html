@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayry Lençóis Tour | Passeios Privativos 4x4 em Atins</title>
+<meta name="description" content="Passeios privativos de 4x4 às lagoas dos Lençóis Maranhenses, downwinds de kitesurf com apoio em terra e transfers privativos saindo de Atins.">
+<link rel="icon" href="img/logo-selo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --areia:#F4ECDD;
+  --areia-2:#EDE2CC;
+  --verde:#15302B;
+  --verde-2:#1E423B;
+  --lagoa:#0F7E64;
+  --lagoa-claro:#2FA68A;
+  --sol:#D97A2B;
+  --linha:rgba(21,48,43,.14);
+  --raio:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--areia);
+  color:var(--verde);
+  font-family:'Figtree',sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.disp{font-family:'Big Shoulders Display',sans-serif;letter-spacing:.01em;line-height:1.02;text-transform:uppercase}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+
+/* ---------- nav ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(244,236,221,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--linha);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:38px;height:38px;border-radius:50%;object-fit:cover}
+.logo b{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.04em}
+.logo b span{color:var(--lagoa)}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:600}
+.nav-links a{opacity:.8;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-cta{
+  background:var(--verde);color:var(--areia);
+  padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--lagoa)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+  padding:140px 0 80px;
+  background:
+    linear-gradient(100deg, rgba(244,236,221,.97) 0%, rgba(244,236,221,.92) 34%, rgba(244,236,221,.55) 64%, rgba(244,236,221,.22) 100%),
+    url('img/foto-07.jpg') center 68%/cover no-repeat,
+    var(--areia);
+}
+@media(max-width:860px){
+  .hero{background:
+    linear-gradient(180deg, rgba(244,236,221,.96) 0%, rgba(244,236,221,.9) 55%, rgba(244,236,221,.72) 100%),
+    url('img/foto-07.jpg') center 68%/cover no-repeat,
+    var(--areia);}
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--lagoa);margin-bottom:22px;
+}
+.hero-kicker::before{content:"";width:34px;height:2px;background:var(--sol)}
+.hero h1{
+  font-size:clamp(56px,10vw,128px);
+  font-weight:800;
+  max-width:11ch;
+}
+.hero h1 em{font-style:normal;color:var(--lagoa)}
+.hero p{max-width:520px;margin-top:26px;font-size:19px;opacity:.85}
+.hero-actions{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 30px;border-radius:999px;
+  font-weight:700;font-size:15px;
+  transition:transform .2s, background .2s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:var(--verde);color:var(--areia)}
+.btn-solid:hover{background:var(--lagoa)}
+.btn-ghost{border:2px solid var(--verde);color:var(--verde)}
+.hero-strip{
+  margin-top:72px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--linha);
+  border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);
+}
+.hero-strip div{background:#FBF6EA;padding:20px 18px}
+.hero-strip b{font-family:'Big Shoulders Display',sans-serif;font-size:26px;font-weight:800;text-transform:uppercase;display:block}
+.hero-strip span{font-size:14px;opacity:.7}
+@media(max-width:700px){.hero-strip{grid-template-columns:1fr}}
+
+/* trilha pontilhada decorativa */
+.trilha{
+  position:absolute;right:6%;top:18%;height:64%;width:2px;
+  background-image:linear-gradient(var(--verde) 42%, transparent 42%);
+  background-size:2px 14px;
+  opacity:.25;
+}
+@media(max-width:860px){.trilha{display:none}}
+
+/* ---------- intro ---------- */
+.intro{background:var(--verde);color:var(--areia)}
+.intro .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}
+.intro h2{font-size:clamp(40px,5.5vw,64px);font-weight:800}
+.intro h2 span{color:var(--lagoa-claro)}
+.intro p{opacity:.82;margin-bottom:18px}
+.intro img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--raio);margin-top:30px}
+.intro .selo{
+  display:inline-block;margin-top:10px;
+  border:1px solid rgba(244,236,221,.3);border-radius:999px;
+  padding:10px 22px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+}
+@media(max-width:860px){.intro .wrap{grid-template-columns:1fr;gap:34px}}
+
+/* ---------- serviços ---------- */
+.kicker{
+  font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--sol);display:flex;align-items:center;gap:10px;margin-bottom:16px;
+}
+.kicker::before{content:"";width:34px;height:2px;background:var(--sol)}
+.sec-title{font-size:clamp(38px,5vw,58px);font-weight:800;max-width:16ch}
+.sec-sub{max-width:560px;margin-top:16px;opacity:.8}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
+.card{
+  background:#FBF6EA;
+  border:1px solid var(--linha);
+  border-radius:var(--raio);
+  padding:34px 28px;
+  display:flex;flex-direction:column;gap:16px;
+  transition:transform .25s, box-shadow .25s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -30px rgba(21,48,43,.4)}
+.card-img{width:calc(100% + 56px);margin:-34px -28px 4px;aspect-ratio:16/10;object-fit:cover;border-radius:var(--raio) var(--raio) 0 0}
+.card .num{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:15px;
+  color:var(--lagoa);letter-spacing:.14em;
+}
+.card h3{font-size:30px;font-weight:800}
+.card p{font-size:15.5px;opacity:.8;flex:1}
+.card a{font-weight:700;font-size:14px;color:var(--lagoa);display:inline-flex;align-items:center;gap:6px;padding:12px 0 2px;min-height:24px}
+.card a::after{content:"→";transition:transform .2s}
+.card a:hover::after{transform:translateX(4px)}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+
+/* ---------- lagoas ---------- */
+.lagoas{background:var(--areia-2)}
+.lagoas .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.lagoa-lista{display:flex;flex-direction:column;border-top:1px solid var(--linha)}
+.lagoa-item{
+  display:flex;align-items:baseline;gap:18px;
+  padding:20px 6px;border-bottom:1px solid var(--linha);
+}
+.lagoa-item b{font-family:'Big Shoulders Display',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase}
+.lagoa-item span{font-size:14px;opacity:.65;margin-left:auto;text-align:right}
+.lagoas .nota{
+  margin-top:26px;padding:18px 22px;border-left:3px solid var(--sol);
+  background:rgba(217,122,43,.08);border-radius:0 12px 12px 0;font-size:15px;
+}
+.lagoas .foto-lagoa{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--raio);margin-top:26px}
+@media(max-width:860px){.lagoas .wrap{grid-template-columns:1fr;gap:34px}}
+
+/* ---------- downwind ---------- */
+.dw{background:var(--verde);color:var(--areia);position:relative;overflow:hidden}
+.dw::after{
+  content:"";position:absolute;inset:auto -10% -40% -10%;height:70%;
+  background:radial-gradient(60% 100% at 50% 100%, rgba(47,166,138,.25), transparent 70%);
+  pointer-events:none;
+}
+.dw .kicker{color:var(--lagoa-claro)}
+.dw .kicker::before{background:var(--lagoa-claro)}
+.dw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;position:relative;z-index:1}
+.dw-step{
+  border:1px solid rgba(244,236,221,.18);
+  border-radius:var(--raio);
+  padding:30px 26px;
+}
+.dw-step .tag{
+  display:inline-block;background:var(--lagoa);color:var(--areia);
+  font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:14px;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:6px 14px;border-radius:999px;margin-bottom:18px;
+}
+.dw-step h3{font-size:26px;font-weight:800;margin-bottom:10px}
+.dw-step p{font-size:15px;opacity:.78}
+.dw-extra{margin-top:40px;font-size:15.5px;opacity:.85;max-width:640px;position:relative;z-index:1}
+.dw-foto{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:center 40%;border-radius:var(--raio);margin-top:44px;position:relative;z-index:1}
+@media(max-width:700px){.dw-foto{aspect-ratio:4/3}}
+@media(max-width:860px){.dw-grid{grid-template-columns:1fr}}
+
+/* ---------- transfers ---------- */
+.rotas{margin-top:54px;border-top:1px solid var(--linha)}
+.rota{
+  display:grid;grid-template-columns:1fr auto 1fr auto;
+  align-items:center;gap:18px;
+  padding:24px 6px;border-bottom:1px solid var(--linha);
+  transition:background .2s;
+}
+.rota:hover{background:rgba(15,126,100,.05)}
+.rota b{font-family:'Big Shoulders Display',sans-serif;font-size:26px;font-weight:700;text-transform:uppercase}
+.rota .seta{color:var(--sol);font-size:22px;font-weight:700}
+.rota span{font-size:14px;opacity:.65;justify-self:end;text-align:right}
+@media(max-width:700px){
+  .rota{grid-template-columns:1fr auto 1fr}
+  .rota span{display:none}
+}
+
+/* ---------- porquê ---------- */
+.pq{background:var(--areia-2)}
+.pq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:54px}
+.pq-item{
+  background:#FBF6EA;border:1px solid var(--linha);border-radius:var(--raio);
+  padding:30px 28px;display:flex;gap:20px;align-items:flex-start;
+}
+.pq-item svg{width:30px;height:30px;flex-shrink:0;margin-top:4px}
+.pq-item h3{font-size:24px;font-weight:800;margin-bottom:8px}
+.pq-item p{font-size:15px;opacity:.8}
+@media(max-width:760px){.pq-grid{grid-template-columns:1fr}}
+
+/* ---------- galeria ---------- */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:14px;margin-top:54px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.gal img:nth-child(1),.gal img:nth-child(5){grid-row:span 2}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:160px}}
+
+/* ---------- cta ---------- */
+.cta{
+  background:
+    linear-gradient(180deg, rgba(21,48,43,.86), rgba(21,48,43,.94)),
+    url('img/foto-05.jpg') center 30%/cover no-repeat,
+    var(--verde);
+  color:var(--areia);text-align:center;
+}
+.cta h2{font-size:clamp(44px,7vw,84px);font-weight:800}
+.cta h2 span{color:var(--lagoa-claro)}
+.cta p{max-width:520px;margin:20px auto 0;opacity:.82}
+.cta .btn-solid{background:var(--sol);color:#fff;margin-top:36px}
+.cta .btn-solid:hover{background:#c46a20}
+.cta small{display:block;margin-top:18px;font-size:13px;opacity:.55}
+
+/* ---------- footer ---------- */
+footer{background:var(--verde);color:var(--areia);border-top:1px solid rgba(244,236,221,.12);padding:34px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px;opacity:.75}
+.foot .logo b{font-size:18px}
+
+/* ---------- reveal ---------- */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+.rev.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">
+      <img src="img/logo-selo.jpg" alt="Selo da Mayry Lençóis Tour">
+      <b>Mayry <span>Lençóis Tour</span></b>
+    </a>
+    <div class="nav-links">
+      <a href="#passeios">Passeios</a>
+      <a href="#lagoas">Lagoas</a>
+      <a href="#downwind">Downwind</a>
+      <a href="#transfers">Transfers</a>
+      <a href="#galeria">Galeria</a>
+    </div>
+    <a class="nav-cta" href="#contato">Reservar</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="trilha"></div>
+  <div class="wrap">
+    <span class="hero-kicker">Atins, Lençóis Maranhenses</span>
+    <h1>O deserto de água é grande. <em>Vá de 4x4.</em></h1>
+    <p>Passeios privativos às lagoas, downwinds de kitesurf com apoio em terra e transfers sob medida. Tudo em 4x4, saindo de Atins, no ritmo do seu grupo.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#contato">Montar meu passeio</a>
+      <a class="btn btn-ghost" href="#passeios">Ver os roteiros</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-strip rev">
+      <div><b>100% privativo</b><span>O 4x4 é só do seu grupo, sem lotação</span></div>
+      <div><b>Condutor local</b><span>Quem dirige conhece cada entrada de duna</span></div>
+      <div><b>Horário flexível</b><span>Nascer do sol, fim de tarde ou o dia inteiro</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="rev">
+      <h2>Atins por quem <span>dirige nela</span> todos os dias</h2>
+    </div>
+    <div class="rev">
+      <p>A Mayry nasceu em Atins. Antes de levar turista, o 4x4 daqui já cruzava duna, maré e lagoa para resolver a vida da vila. É essa leitura do terreno que faz a diferença no seu passeio: saber onde a areia segura, qual lagoa está cheia e que horas a luz fica bonita.</p>
+      <p>Cada saída é desenhada para o seu grupo. Casal, família com criança, galera do kite. Você diz o que quer viver, a gente traça a rota.</p>
+      <span class="selo">Operação local, de Atins</span>
+      <img src="img/foto-03.jpg" alt="Mesa posta na duna ao pôr do sol, com a lagoa ao fundo" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="passeios">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker">O que a gente faz</span>
+      <h2 class="sec-title">Três jeitos de viver os Lençóis</h2>
+      <p class="sec-sub">Roteiros privativos de 4x4 para quem quer as lagoas sem pressa, o vento a favor ou simplesmente chegar bem em qualquer ponto da região.</p>
+    </div>
+    <div class="cards">
+      <article class="card rev">
+        <img class="card-img" src="img/foto-05.jpg" alt="Pôr do sol sobre as dunas e a lagoa" loading="lazy">
+        <span class="num">01</span>
+        <h3>Passeios privativos às lagoas</h3>
+        <p>Circuito pelas lagoas do lado de Atins do Parque Nacional, com paradas livres para banho, fotos e aquele silêncio que só existe no meio das dunas. Roteiro e horário ajustados ao seu grupo.</p>
+        <a href="#lagoas">Conhecer as lagoas</a>
+      </article>
+      <article class="card rev">
+        <img class="card-img" src="img/foto-01.jpg" alt="Kitesurfistas entrando na água no fim de tarde em Atins" loading="lazy">
+        <span class="num">02</span>
+        <h3>Downwind de kitesurf com apoio 4x4</h3>
+        <p>Você vela, a gente acompanha. Suporte em terra do ponto de largada ao resgate, levando equipamento, água e quem não entra na água. O vento manda, o 4x4 obedece.</p>
+        <a href="#downwind">Como funciona</a>
+      </article>
+      <article class="card rev">
+        <img class="card-img" src="img/foto-02.jpg" alt="Beira da praia de Atins em dia claro" loading="lazy">
+        <span class="num">03</span>
+        <h3>Transfers privativos em 4x4</h3>
+        <p>Travessias pela praia e pelas dunas entre Atins, Barreirinhas, Caburé, Santo Amaro e outros pontos da região. Veículo só para o seu grupo, com bagagem protegida e horário combinado.</p>
+        <a href="#transfers">Ver rotas</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="lagoas" id="lagoas">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker">Roteiro das lagoas</span>
+      <h2 class="sec-title">As águas do lado de Atins</h2>
+      <p class="sec-sub" style="margin-bottom:26px">O lado de Atins é o mais preservado do Parque. As lagoas mudam com a estação, e é por isso que o roteiro é montado na semana do seu passeio, priorizando as que estão mais cheias e bonitas.</p>
+      <div class="nota"><b>Melhor época:</b> de maio a setembro as lagoas estão no auge, cheias das chuvas do início do ano. No restante do ano o passeio segue lindo, com dunas imensas e muito menos gente.</div>
+      <img class="foto-lagoa" src="img/foto-07.jpg" alt="Lagoa de água cristalina cercada por dunas brancas" loading="lazy">
+    </div>
+    <div class="rev">
+      <div class="lagoa-lista">
+        <div class="lagoa-item"><b>Lagoa Bonita</b><span>A clássica do lado de Atins, imensa e cristalina</span></div>
+        <div class="lagoa-item"><b>Ponta do Mangue</b><span>Rota selvagem de dunas e lagoas na porta de Atins</span></div>
+        <div class="lagoa-item"><b>Lagoa da Bandeira</b><span>Água doce e cheia, parada certa do roteiro</span></div>
+        <div class="lagoa-item"><b>Canto do Atins</b><span>Encontro do rio com o mar, parada para o famoso camarão</span></div>
+        <div class="lagoa-item"><b>Baixa Grande</b><span>Oásis no meio do deserto, com morada de nativos</span></div>
+        <div class="lagoa-item"><b>Queimada dos Britos</b><span>O coração dos Lençóis, para quem quer ir fundo</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dw" id="downwind">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker">Para quem vela</span>
+      <h2 class="sec-title">Downwind com o 4x4 na sua sombra</h2>
+      <p class="sec-sub" style="opacity:.8">Atins é ponto de largada de alguns dos downwinds mais bonitos do Brasil. O que separa um dia épico de uma dor de cabeça é o apoio em terra. É aí que a Mayry entra.</p>
+    </div>
+    <div class="dw-grid">
+      <div class="dw-step rev">
+        <span class="tag">Largada</span>
+        <h3>Tudo no carro</h3>
+        <p>Buscamos você e o equipamento na pousada, levamos ao ponto de largada e ajudamos na montagem. Água, lanche e protetor já ficam a bordo.</p>
+      </div>
+      <div class="dw-step rev">
+        <span class="tag">Percurso</span>
+        <h3>Acompanhamento pela praia</h3>
+        <p>O 4x4 segue o grupo pela faixa de areia, com paradas combinadas. Quem não vela vai no carro curtindo o visual e registrando tudo.</p>
+      </div>
+      <div class="dw-step rev">
+        <span class="tag">Chegada</span>
+        <h3>Resgate e retorno</h3>
+        <p>No ponto final, desmontamos juntos, carregamos tudo e voltamos para Atins com você. Sem depender de carona nem de sorte.</p>
+      </div>
+    </div>
+    <p class="dw-extra rev">Trajetos sob consulta conforme o vento e a maré do dia. Para sessão de flat, levamos você à Lagoa da Pininga, água doce lisa e vento limpo, com o 4x4 esperando na beira. Atendemos kitistas avulsos, escolas e kite trips com logística completa de apoio.</p>
+    <img class="dw-foto rev" src="img/foto-06.jpg" alt="Kitesurfista velejando no pôr do sol em Atins" loading="lazy">
+  </div>
+</section>
+
+<section id="transfers">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker">De ponto a ponto</span>
+      <h2 class="sec-title">Transfers privativos em 4x4</h2>
+      <p class="sec-sub">Chegar em Atins é parte da aventura. Entre rio, praia e duna, o caminho pede veículo preparado e motorista que conhece a maré. Rotas mais pedidas:</p>
+    </div>
+    <div class="rotas rev">
+      <div class="rota"><b>Barreirinhas</b><span class="seta">⇄</span><b>Atins</b><span>Pela praia ou pela balsa, conforme a maré</span></div>
+      <div class="rota"><b>Atins</b><span class="seta">⇄</span><b>Caburé</b><span>Travessia curta, ideal para bate e volta</span></div>
+      <div class="rota"><b>Atins</b><span class="seta">⇄</span><b>Santo Amaro</b><span>Expedição pelo meio do Parque, dia inteiro</span></div>
+      <div class="rota"><b>Atins</b><span class="seta">⇄</span><b>Tutóia / Paulino Neves</b><span>Rota dos Lençóis pequenos, sob consulta</span></div>
+      <div class="rota"><b>Barreirinhas</b><span class="seta">⇄</span><b>Parnaíba</b><span>Conexão com o Delta do Parnaíba</span></div>
+      <div class="rota"><b>Barreirinhas</b><span class="seta">⇄</span><b>Jericoacoara</b><span>Trecho da Rota das Emoções, dia inteiro</span></div>
+    </div>
+    <p style="margin-top:26px;font-size:15px;opacity:.7">Outros destinos e horários especiais, como saídas de madrugada para voos, são combinados direto no WhatsApp.</p>
+  </div>
+</section>
+
+<section class="pq" id="porque">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker">Por que a Mayry</span>
+      <h2 class="sec-title">O que vem junto com o banco do carona</h2>
+    </div>
+    <div class="pq-grid">
+      <div class="pq-item rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0F7E64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div>
+          <h3>Raiz de Atins</h3>
+          <p>Operação de gente da vila. Isso significa acesso, leitura de maré e aquela parada no lugar certo que não está em nenhum mapa.</p>
+        </div>
+      </div>
+      <div class="pq-item rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0F7E64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <div>
+          <h3>Seu horário, seu ritmo</h3>
+          <p>Sem van lotada nem cronômetro. Quer ficar uma hora a mais na lagoa? Fica. O passeio é seu.</p>
+        </div>
+      </div>
+      <div class="pq-item rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0F7E64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l2-6-4-1-3-4H9L6 10l-4 1 3 6z"/><circle cx="8" cy="18" r="1.6"/><circle cx="16" cy="18" r="1.6"/></svg>
+        <div>
+          <h3>4x4 preparado para as dunas</h3>
+          <p>Veículo revisado, equipado para areia fofa e travessias, com espaço para grupo, bagagem e equipamento de kite.</p>
+        </div>
+      </div>
+      <div class="pq-item rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0F7E64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+        <div>
+          <h3>Atendimento direto</h3>
+          <p>Você fala com quem vai te buscar. Orçamento claro no WhatsApp, sem intermediário e sem surpresa no preço.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker">Galeria</span>
+      <h2 class="sec-title">Pelo para-brisa da Mayry</h2>
+      <p class="sec-sub">Um pouco do que a gente vê trabalhando. Tudo registrado nos passeios, sem filtro.</p>
+    </div>
+    <div class="gal rev">
+      <img src="img/foto-07.jpg" alt="Lagoa cristalina entre dunas brancas" loading="lazy">
+      <img src="img/foto-01.jpg" alt="Kites no céu de Atins no fim de tarde" loading="lazy">
+      <img src="img/foto-03.jpg" alt="Mesa posta na duna para o pôr do sol" loading="lazy">
+      <img src="img/foto-02.jpg" alt="Beira da praia em dia claro" loading="lazy">
+      <img src="img/foto-05.jpg" alt="Sol se pondo atrás das dunas" loading="lazy">
+      <img src="img/foto-06.jpg" alt="Kitesurfista cruzando o pôr do sol" loading="lazy">
+      <img src="img/foto-04.jpg" alt="Lounge montado nas dunas ao entardecer" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <div class="wrap rev">
+    <h2>Bora pra <span>lagoa?</span></h2>
+    <p>Chama no WhatsApp, diz quantas pessoas são e quando chegam. A gente responde com roteiro e valor fechado.</p>
+    <a class="btn btn-solid" href="https://wa.me/5598991353920?text=Ol%C3%A1!%20Quero%20montar%20um%20passeio%20com%20a%20Mayry%20Len%C3%A7%C3%B3is%20Tour." target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.7 1.6.3.2.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.1 1.3z"/></svg>
+      Chamar no WhatsApp
+    </a>
+    <small>Atendemos todos os dias, em português, inglês e espanhol.</small>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a class="logo" href="#top">
+      <img src="img/logo-selo.jpg" alt="" style="width:28px;height:28px">
+      <b>Mayry Lençóis Tour</b>
+    </a>
+    <span>Atins, Barreirinhas, Maranhão. Passeios, downwinds e transfers em 4x4.</span>
+    <span>© 2026 Mayry Lençóis Tour</span>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+}), { threshold: .12 });
+document.querySelectorAll('.rev').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
